@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(40, 38, 38, 0.822);
+}
+
+.parent h3{
+    background-color: #2A3F55;
+    padding: 15px;
+    position: relative;
+    left: 120%;
+    transition: left 1s 2s;
+    
+}
+.parent p{
+    margin: 15px;
+    position: relative;
+    left: 120%;
+    transition: left 1s 3s;
+}
+.parent:hover h3{
+    left: 0px;
+}
+.parent:hover p{
+    left: 0px;
+}
+.parent img{
+    width: 100%;
+    transition: transform 1s;
+    transition-delay: 1s;
+
+}
+.parent{
+    position: relative;
+    width: 25%;
+    border: 2px white solid;
+    overflow: hidden;
+    float: left;
+   
+
+}
+
+.child{
+    color:white;
+    text-align: center;
+    background-color: rgba(42, 63, 85, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0%;
+    top: 0px;
+    transition: opacity 1s ,transform 1s;
+    opacity: 0;
+
+
+    /* transition-delay: 2s; */
+}
+.parent:hover .child{
+    opacity: 1;
+    transform: rotate(360deg);
+    
+
+}
+.parent:hover img{
+    transform: scale(1.2,1.2);
+
+}
+.container{
+    width: 90%;
+    margin: auto;
+    
+}
+@media  screen and  (max-width: 992px) and (min-width: 600px){
+.parent{
+    width: 50%;
+
+}
+
+}
+@media  screen and  (max-width: 599px){
+    .parent{
+        width: 100%;
+    
+    }
+}
